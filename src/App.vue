@@ -1,7 +1,7 @@
 <template>
   <header class="header">
-    <div class="header__logo">
-      <h1><a href="#">mangcoding Store</a></h1>
+    <div class="header__left">
+      <router-link to="/" class="header__logo">mangcoding Store</router-link>
     </div>
     <!-- <nav class="header__nav">
       <ul class="header__link">
@@ -31,5 +31,32 @@
 
 <style lang="scss">
 @import './css/variables.scss';
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 80px;
+  background-color: bisque;
+  
+  &__left {
+    padding: 23px 0;
+  }
+  
+  &__logo {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: $dark;
+    padding-left: 44px;
+    margin: 9px 0;
+    max-height: 34px;
+    background: url('./assets/img/header/Logo.png') no-repeat;
+  }
+}
 
 </style>
