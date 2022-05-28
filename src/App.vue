@@ -3,13 +3,19 @@
     <div class="header__left">
       <router-link to="/" class="header__logo">mangcoding Store</router-link>
     </div>
-    <!-- <nav class="header__nav">
-      <ul class="header__link">
-        <li><a href="">Home</a></li>
-        <li><a href="">Shop</a></li>
-        <li><a href="">About Us</a></li>
-        <li><a href="">Contact</a></li>
-      </ul>
+    <nav class="header__nav">
+      <router-link to="/" class="header__link active">
+        <span>Home</span>
+      </router-link>
+      <router-link to="/shop" class="header__link">
+        <span>Shop</span>
+      </router-link>
+      <router-link to="/about" class="header__link">
+        <span>About Us</span>
+      </router-link>
+      <router-link to="/contact" class="header__link">
+        <span>Contact</span>
+      </router-link>
     </nav>
     <div class="header__icons">
       <img src="" alt="">
@@ -18,8 +24,12 @@
     </div>
     <div class="header__input">
 
-    </div> -->
+    </div>
   </header>
+
+  <router-view>
+    
+  </router-view>
   
   <!-- <footer class="footer">
     <h1>Footer</h1>
@@ -33,7 +43,7 @@
 @import './css/variables.scss';
 
 body {
-  max-width: 1440px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 
@@ -44,7 +54,7 @@ body {
   background-color: bisque;
   
   &__left {
-    padding: 23px 0;
+    margin: 23px 0;
   }
   
   &__logo {
@@ -52,10 +62,22 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     color: $dark;
-    padding-left: 44px;
-    margin: 9px 0;
+    padding: 9px 0 9px 44px;
     max-height: 34px;
-    background: url('./assets/img/header/Logo.png') no-repeat;
+    background: url('./assets/img/header/Logo.png') no-repeat left center;
+  }
+  &__nav {
+    margin: 30px;
+  }
+  &__link {
+    font-family: 'Mada', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-right: 30px;
+    padding: 10px;
+    &:last-child {
+      margin: 0px;
+    }
   }
 }
 

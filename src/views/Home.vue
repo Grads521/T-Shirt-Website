@@ -1,12 +1,7 @@
 <template>
-  <div class="Home">
-    <h1 class="header">Header</h1>
-  </div>
+  <h1>Home</h1>
 </template>
 
-<style lang="scss" scoped>
-.header {
-  color: red
-}
+<style lang="scss">
 </style>
 
